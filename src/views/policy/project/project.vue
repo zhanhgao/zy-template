@@ -13,7 +13,7 @@
         <p class="line"></p>
 
         <!-- 搜索结果列表 -->
-        <div class="list">
+        <div class="lists">
             <p class="title_res">7 搜索结果： 天津市欣雨森建筑机械租赁有限公司</p>
 
             <section class="single" v-for="(item,index) in list" :key="index">
@@ -42,32 +42,17 @@ export default {
     computed: {},
     components: {},
     created() {
-        this.getNavPermission()
     },
     filters: {},
     methods: {
-        // 获取用户nav权限
-        getNavPermission() {
-            let _permissionList = this.$store.getters.permissionObj,
-                _name = this.$route.name,
-                _res = _permissionList.filter(item => {
-                    if (item.name === _name) {
-                        return item
-                    }
-                })
-            this.permission = _res[0].permission === 1 ? true : false //类型         1:读写  2:只读
-        },
     },
 }
 </script>
 <style lang="scss" scoped>
 
-.className{
-    margin-top: 50px;
-}
 .title {
-    width: 300px;
-    margin: 0 50px;
+    max-width: 300px;
+    margin: 50px 0 0 0;
 }
 .satisfied {
     font-size: 13px;
@@ -82,8 +67,8 @@ export default {
 }
 
 
-.list{
-    margin: 0 50px;
+.lists{
+    margin: auto;
 }
 .title_res{
     font-size: 14px;
@@ -96,6 +81,7 @@ export default {
     align-items: center;
     margin-bottom: 40px;
     .index{
+        flex-shrink: 0;
         width: 44px;   
         height: 44px;   
         line-height: 44px;   
@@ -112,4 +98,5 @@ export default {
         color: #919191;
     }
 }
+@import "@/style/media.scss";
 </style>

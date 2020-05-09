@@ -68,21 +68,8 @@ export default {
     computed: {},
     components: {},
     created() {
-        // 获取用户nav权限
-        this.getNavPermission()
     },
     methods: {
-        // 获取用户nav权限
-        getNavPermission() {
-            let _permissionList = this.$store.getters.permissionObj,
-                _name = this.$route.name,
-                _res = _permissionList.filter(item => {
-                    if (item.name === _name) {
-                        return item
-                    }
-                })
-            this.permission = _res[0].permission === 1 ? true : false //类型         1:读写  2:只读
-        },
     },
 }
 </script>

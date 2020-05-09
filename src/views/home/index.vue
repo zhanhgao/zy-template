@@ -10,13 +10,7 @@
           </el-input>
         </div>
       </div>
-      <div class="other">
-        <p class="title">政策法规</p>
-        <div class="single" v-for="(item,index) of list" :key="index">
-          <p>2020年5月6日</p>
-          <p class="desc">国家发展改革委关于印发《美丽中国 建设评估指标体系及实施方案》的通知</p>
-        </div>
-      </div>
+     
       <div class="ad">
         <img src="http://www.credit315gov.com/wp-content/uploads/2019/06/2019061902151774.jpg" alt="ad">
       </div>
