@@ -4,8 +4,8 @@
         <div class="title">
             <p class="g_title_style">新搜索</p>
             <p class="satisfied">如果您对结果不满意，请进行其他搜索</p>
-            <el-input placeholder="请输入内容" v-model="input2">
-                <el-button slot="append">搜索</el-button>
+            <el-input placeholder="请输入内容" v-model="val">
+                <el-button slot="append" @click="search">搜索</el-button>
             </el-input>
         </div>
 
@@ -14,13 +14,13 @@
 
         <!-- 搜索结果列表 -->
         <div class="lists">
-            <p class="title_res">7 搜索结果： 天津市欣雨森建筑机械租赁有限公司</p>
+            <p class="title_res">{{totalpage}} 搜索结果： </p>
 
             <section class="single" v-for="(item,index) in list" :key="index">
-                <div class="index">{{item}}</div>
-                <div class="info">
-                    <p class="g_title_style">天津市欣雨森建筑机械租赁有限公司-诚信企业家证书</p>
-                    <p>2020年4月11日 /0 评论/在： 证书公示</p>
+                <div class="index">{{index+1}}</div>
+                <div class="info" @click="goList(item.id)">
+                    <p class="g_title_style">{{item.custName}}-{{item.registeredCapitalName}}</p>
+                    <p>{{item.createTime}}</p>
                 </div>
             </section>
         </div>
@@ -28,28 +28,63 @@
 </template>
 
 <script>
-// import { getProjectList, deleteProject } from '@/api/api'
+import { searchCompany } from '@/api/api'
 import mixins from '@/mixins'
-// import { mapGetters } from 'vuex'
+import data from '@/mock'
+import router from '@/router'
+
 export default {
     mixins: [mixins],
     data() {
         return {
-            list:[1,2,3,4,5,6,7],
-            input2: '',
+            totalpage:'',//总条数
+            list:[],//数据列表
+            val: '测试',//输入框值
         }
     },
     computed: {},
     components: {},
     created() {
+        if(this.$route.params.data){
+            this.val=this.$route.params.data.key;
+        }
+    },
+    mounted(){
+        this.search();
     },
     filters: {},
     methods: {
+        // 搜索企业
+        search(){
+            let __data={
+                key:this.val
+            }
+            searchCompany(__data).then(res=>{
+                res=data.searchList;
+                this.totalpage=res.page.totalCount;
+                if(res.page.list.length){
+                    this.list=res.page.list;
+                }else{
+                    this.$message('没有搜索内容');
+                }
+            }).catch(err=>{
+                console.log(err);
+            })
+        },
+        // 去证书列表页
+        goList(id){
+            router.push({
+                name: 'Certificates',
+                params: {id}
+            })
+        }
     },
 }
 </script>
 <style lang="scss" scoped>
-
+.className{
+    width: 80%;
+}
 .title {
     max-width: 300px;
     margin: 50px 0 0 0;

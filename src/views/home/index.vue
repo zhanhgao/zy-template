@@ -3,9 +3,9 @@
       <div class="search">
         <h3>信用查询</h3>
         <div style="margin-top: 15px;">
-          <el-input placeholder="请输入内容" v-model="input2">
+          <el-input placeholder="请输入内容" v-model="val">
               <template slot="prepend">公司名</template>
-              <el-button slot="append">搜索</el-button>
+              <el-button slot="append" @click="search">搜索</el-button>
               <!-- <el-button slot="append" icon="el-icon-search"></el-button> -->
           </el-input>
         </div>
@@ -18,19 +18,44 @@
 </template>
 
 <script>
+import { searchCompany } from '@/api/api'
+import router from '@/router'
+import data from '@/mock'
 // import { mapGetters } from 'vuex'
 export default {
  data() {
     return {
-      input2: '',
-      list:[1,2,3,4,5]
+      val: '',//输入框val      
     }
   },
   computed: {
     
   },
   components: {
-  }
+  },
+  methods: {
+    // 搜索企业
+    search(){
+      let __data={
+        key:this.val
+      }
+      searchCompany(__data).then(res=>{
+        res=data.searchList;
+        if(res.page.list.length){
+          router.push({
+            name: 'Project',
+            params: {
+              data: __data
+            }
+          })
+        }else{
+          this.$message('没有搜索内容')
+        }
+      }).catch(err=>{
+        console.log(err);
+      })
+    }
+  },
 }
 </script>
 <style lang="scss" scoped>
