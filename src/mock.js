@@ -2,9 +2,9 @@ let searchList = {
     "msg": "success",
     "code": 0,
     "page": {
-        "totalCount": 4,
+        "totalCount": 20,
         "pageSize": 10,
-        "totalPage": 1,
+        "totalPage": 2,
         "currPage": 1,
         "list": [{
                 "id": 1,
@@ -65,12 +65,237 @@ let searchList = {
                 "sysUserId": 1,
                 "createTime": "2020-05-20 04:09:08",
                 "updateTime": "2020-05-20 04:23:33"
+            },
+            {
+                "id": 4,
+                "custName": "测试公司4",
+                "socialCreditUnifiedCode": "65456415616456",
+                "registeredCapital": 3,
+                "registeredCapitalName": "证书类型3",
+                "legalRepresentative": "赵六",
+                "businessTermStartTime": "2020-05-14 13:00:00",
+                "businessTermEndTime": "2030-05-19 13:00:00",
+                "registrationAuthority": "注册地址注册地址注册地址注册地址",
+                "businessScope": "经营范围经营范围经营范围经营范围经营范围经营范围经营范围",
+                "sysUserId": 1,
+                "createTime": "2020-05-20 04:09:08",
+                "updateTime": "2020-05-20 04:23:33"
+            },
+            {
+                "id": 4,
+                "custName": "测试公司4",
+                "socialCreditUnifiedCode": "65456415616456",
+                "registeredCapital": 3,
+                "registeredCapitalName": "证书类型3",
+                "legalRepresentative": "赵六",
+                "businessTermStartTime": "2020-05-14 13:00:00",
+                "businessTermEndTime": "2030-05-19 13:00:00",
+                "registrationAuthority": "注册地址注册地址注册地址注册地址",
+                "businessScope": "经营范围经营范围经营范围经营范围经营范围经营范围经营范围",
+                "sysUserId": 1,
+                "createTime": "2020-05-20 04:09:08",
+                "updateTime": "2020-05-20 04:23:33"
+            },
+            {
+                "id": 4,
+                "custName": "测试公司4",
+                "socialCreditUnifiedCode": "65456415616456",
+                "registeredCapital": 3,
+                "registeredCapitalName": "证书类型3",
+                "legalRepresentative": "赵六",
+                "businessTermStartTime": "2020-05-14 13:00:00",
+                "businessTermEndTime": "2030-05-19 13:00:00",
+                "registrationAuthority": "注册地址注册地址注册地址注册地址",
+                "businessScope": "经营范围经营范围经营范围经营范围经营范围经营范围经营范围",
+                "sysUserId": 1,
+                "createTime": "2020-05-20 04:09:08",
+                "updateTime": "2020-05-20 04:23:33"
+            },
+            {
+                "id": 4,
+                "custName": "测试公司4",
+                "socialCreditUnifiedCode": "65456415616456",
+                "registeredCapital": 3,
+                "registeredCapitalName": "证书类型3",
+                "legalRepresentative": "赵六",
+                "businessTermStartTime": "2020-05-14 13:00:00",
+                "businessTermEndTime": "2030-05-19 13:00:00",
+                "registrationAuthority": "注册地址注册地址注册地址注册地址",
+                "businessScope": "经营范围经营范围经营范围经营范围经营范围经营范围经营范围",
+                "sysUserId": 1,
+                "createTime": "2020-05-20 04:09:08",
+                "updateTime": "2020-05-20 04:23:33"
+            },
+            {
+                "id": 4,
+                "custName": "测试公司4",
+                "socialCreditUnifiedCode": "65456415616456",
+                "registeredCapital": 3,
+                "registeredCapitalName": "证书类型3",
+                "legalRepresentative": "赵六",
+                "businessTermStartTime": "2020-05-14 13:00:00",
+                "businessTermEndTime": "2030-05-19 13:00:00",
+                "registrationAuthority": "注册地址注册地址注册地址注册地址",
+                "businessScope": "经营范围经营范围经营范围经营范围经营范围经营范围经营范围",
+                "sysUserId": 1,
+                "createTime": "2020-05-20 04:09:08",
+                "updateTime": "2020-05-20 04:23:33"
+            },
+            {
+                "id": 4,
+                "custName": "测试公司4",
+                "socialCreditUnifiedCode": "65456415616456",
+                "registeredCapital": 3,
+                "registeredCapitalName": "证书类型3",
+                "legalRepresentative": "赵六",
+                "businessTermStartTime": "2020-05-14 13:00:00",
+                "businessTermEndTime": "2030-05-19 13:00:00",
+                "registrationAuthority": "注册地址注册地址注册地址注册地址",
+                "businessScope": "经营范围经营范围经营范围经营范围经营范围经营范围经营范围",
+                "sysUserId": 1,
+                "createTime": "2020-05-20 04:09:08",
+                "updateTime": "2020-05-20 04:23:33"
+            },
+            {
+                "id": 4,
+                "custName": "测试公司4",
+                "socialCreditUnifiedCode": "65456415616456",
+                "registeredCapital": 3,
+                "registeredCapitalName": "证书类型3",
+                "legalRepresentative": "赵六",
+                "businessTermStartTime": "2020-05-14 13:00:00",
+                "businessTermEndTime": "2030-05-19 13:00:00",
+                "registrationAuthority": "注册地址注册地址注册地址注册地址",
+                "businessScope": "经营范围经营范围经营范围经营范围经营范围经营范围经营范围",
+                "sysUserId": 1,
+                "createTime": "2020-05-20 04:09:08",
+                "updateTime": "2020-05-20 04:23:33"
+            },
+            {
+                "id": 4,
+                "custName": "测试公司4",
+                "socialCreditUnifiedCode": "65456415616456",
+                "registeredCapital": 3,
+                "registeredCapitalName": "证书类型3",
+                "legalRepresentative": "赵六",
+                "businessTermStartTime": "2020-05-14 13:00:00",
+                "businessTermEndTime": "2030-05-19 13:00:00",
+                "registrationAuthority": "注册地址注册地址注册地址注册地址",
+                "businessScope": "经营范围经营范围经营范围经营范围经营范围经营范围经营范围",
+                "sysUserId": 1,
+                "createTime": "2020-05-20 04:09:08",
+                "updateTime": "2020-05-20 04:23:33"
+            },
+            {
+                "id": 4,
+                "custName": "测试公司4",
+                "socialCreditUnifiedCode": "65456415616456",
+                "registeredCapital": 3,
+                "registeredCapitalName": "证书类型3",
+                "legalRepresentative": "赵六",
+                "businessTermStartTime": "2020-05-14 13:00:00",
+                "businessTermEndTime": "2030-05-19 13:00:00",
+                "registrationAuthority": "注册地址注册地址注册地址注册地址",
+                "businessScope": "经营范围经营范围经营范围经营范围经营范围经营范围经营范围",
+                "sysUserId": 1,
+                "createTime": "2020-05-20 04:09:08",
+                "updateTime": "2020-05-20 04:23:33"
+            },
+            {
+                "id": 4,
+                "custName": "测试公司4",
+                "socialCreditUnifiedCode": "65456415616456",
+                "registeredCapital": 3,
+                "registeredCapitalName": "证书类型3",
+                "legalRepresentative": "赵六",
+                "businessTermStartTime": "2020-05-14 13:00:00",
+                "businessTermEndTime": "2030-05-19 13:00:00",
+                "registrationAuthority": "注册地址注册地址注册地址注册地址",
+                "businessScope": "经营范围经营范围经营范围经营范围经营范围经营范围经营范围",
+                "sysUserId": 1,
+                "createTime": "2020-05-20 04:09:08",
+                "updateTime": "2020-05-20 04:23:33"
+            },
+            {
+                "id": 4,
+                "custName": "测试公司4",
+                "socialCreditUnifiedCode": "65456415616456",
+                "registeredCapital": 3,
+                "registeredCapitalName": "证书类型3",
+                "legalRepresentative": "赵六",
+                "businessTermStartTime": "2020-05-14 13:00:00",
+                "businessTermEndTime": "2030-05-19 13:00:00",
+                "registrationAuthority": "注册地址注册地址注册地址注册地址",
+                "businessScope": "经营范围经营范围经营范围经营范围经营范围经营范围经营范围",
+                "sysUserId": 1,
+                "createTime": "2020-05-20 04:09:08",
+                "updateTime": "2020-05-20 04:23:33"
+            },
+            {
+                "id": 4,
+                "custName": "测试公司4",
+                "socialCreditUnifiedCode": "65456415616456",
+                "registeredCapital": 3,
+                "registeredCapitalName": "证书类型3",
+                "legalRepresentative": "赵六",
+                "businessTermStartTime": "2020-05-14 13:00:00",
+                "businessTermEndTime": "2030-05-19 13:00:00",
+                "registrationAuthority": "注册地址注册地址注册地址注册地址",
+                "businessScope": "经营范围经营范围经营范围经营范围经营范围经营范围经营范围",
+                "sysUserId": 1,
+                "createTime": "2020-05-20 04:09:08",
+                "updateTime": "2020-05-20 04:23:33"
+            },
+            {
+                "id": 4,
+                "custName": "测试公司4",
+                "socialCreditUnifiedCode": "65456415616456",
+                "registeredCapital": 3,
+                "registeredCapitalName": "证书类型3",
+                "legalRepresentative": "赵六",
+                "businessTermStartTime": "2020-05-14 13:00:00",
+                "businessTermEndTime": "2030-05-19 13:00:00",
+                "registrationAuthority": "注册地址注册地址注册地址注册地址",
+                "businessScope": "经营范围经营范围经营范围经营范围经营范围经营范围经营范围",
+                "sysUserId": 1,
+                "createTime": "2020-05-20 04:09:08",
+                "updateTime": "2020-05-20 04:23:33"
+            },
+            {
+                "id": 4,
+                "custName": "测试公司4",
+                "socialCreditUnifiedCode": "65456415616456",
+                "registeredCapital": 3,
+                "registeredCapitalName": "证书类型3",
+                "legalRepresentative": "赵六",
+                "businessTermStartTime": "2020-05-14 13:00:00",
+                "businessTermEndTime": "2030-05-19 13:00:00",
+                "registrationAuthority": "注册地址注册地址注册地址注册地址",
+                "businessScope": "经营范围经营范围经营范围经营范围经营范围经营范围经营范围",
+                "sysUserId": 1,
+                "createTime": "2020-05-20 04:09:08",
+                "updateTime": "2020-05-20 04:23:33"
+            },
+            {
+                "id": 4,
+                "custName": "测试公司4",
+                "socialCreditUnifiedCode": "65456415616456",
+                "registeredCapital": 3,
+                "registeredCapitalName": "证书类型3",
+                "legalRepresentative": "赵六",
+                "businessTermStartTime": "2020-05-14 13:00:00",
+                "businessTermEndTime": "2030-05-19 13:00:00",
+                "registrationAuthority": "注册地址注册地址注册地址注册地址",
+                "businessScope": "经营范围经营范围经营范围经营范围经营范围经营范围经营范围",
+                "sysUserId": 1,
+                "createTime": "2020-05-20 04:09:08",
+                "updateTime": "2020-05-20 04:23:33"
             }
         ]
     }
 }
 
-let list2={
+let certificateList={
     "msg": "success",
     "code": 0,
     "page": [
@@ -136,8 +361,45 @@ let list2={
       "updateTime": "2020-05-20 04:23:33"
     }
   }
+let detailData={
+  "msg": "success",
+  "code": 0,
+  "page": [
+    {
+      "id": 1,
+      "custId": 1,
+      "certificateTypeId": 1,
+      "certificateTypeName": "证书类型1",
+      "certificateGradeId": 2,
+      "certificateGradeName": "证书类型2",
+      "evaluateOrganization": "评价机构1",
+      "guidanceOrganization": "指导机构1",
+      "certificateNo": "123456",
+      "issUeDate": "2020-06-09 13:00:00",
+      "periodOfValidity": "2021-06-09 13:00:00",
+      "createTime": "2020-05-20 04:09:47",
+      "updateTime": "2020-05-20 04:20:09"
+    }
+  ],
+  "cust": {
+    "id": 1,
+    "custName": "测试公司1",
+    "socialCreditUnifiedCode": "123456",
+    "registeredCapital": 2,
+    "registeredCapitalName": null,
+    "legalRepresentative": "张三",
+    "businessTermStartTime": "2020-05-19 13:00:00",
+    "businessTermEndTime": "2030-05-19 13:00:00",
+    "registrationAuthority": "注册地址注册地址注册地址注册地址",
+    "businessScope": "经营范围经营范围经营范围经营范围经营范围经营范围经营范围",
+    "sysUserId": 1,
+    "createTime": "2020-05-20 04:09:08",
+    "updateTime": "2020-05-20 04:23:33"
+  }
+}  
 
 export default{
     searchList,
-    list2
+    certificateList,
+    detailData
 }

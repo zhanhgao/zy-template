@@ -3,8 +3,8 @@
         <!-- 友情链接 -->
         <div class="list">
             <div class="box">
-                <p v-for="(item,index) in 25" :key="index">
-                    <span>中央文明办</span>
+                <p v-for="(item,index) in list" :key="index">
+                    <span>{{item}}</span>
                 </p>
                 <!-- <p v-for="(item,index) in list " :key="index">
             <span>{{item}}</span>
@@ -26,7 +26,33 @@
 export default {
     data() {
         return {
-            list: [],
+            list: [
+                '中央文明办',
+                '中央编办',
+                '最高法',
+                '民政部',
+                '商务部',
+                '中央政法委',
+                '海关总署',
+                '最高检',
+                '司法部',
+                '住建部',
+                '中央网信办',
+                '税务总局',
+                '教育部',
+                '财政部',
+                '法制办',
+                '环境保护部',
+                '工商总局',
+                '公安部',
+                '农业部',
+                '银监会',
+                '交通运输部',
+                '质检总局',
+                '民航局',
+                '商务部',
+                '证监会'
+            ],
         }
     },
     components: {},
