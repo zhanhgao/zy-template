@@ -13,7 +13,7 @@
         </section>
 
         <!-- 分页 -->
-        <div class="pagination">
+        <div class="pagination" v-if="list.length">
             <el-pagination
                 background
                 layout="prev, pager, next,total"
@@ -29,7 +29,6 @@
 <script>
 import { certificateList } from '@/api/api'
 import router from '@/router'
-import data from '@/mock'
 // import { mapGetters } from 'vuex'
 export default {
     data() {
@@ -57,7 +56,6 @@ export default {
             customerId:this.customerId
           }
           certificateList(_data).then(res=>{
-              res=data.certificateList;
               if(res.page.length){
                 this.list=res.page;
                 this.totalCount=res.page.length;
@@ -87,7 +85,9 @@ export default {
     .certificates {
         margin: 0 50px;
     }
-
+.pagination {
+        margin: 60px 0 30px 0;
+    }
 .single {
     cursor: pointer;
     border-bottom: 1px solid #e1e1e1;

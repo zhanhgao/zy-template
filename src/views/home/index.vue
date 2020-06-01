@@ -20,8 +20,6 @@
 <script>
 import { searchCompany } from '@/api/api'
 import router from '@/router'
-import data from '@/mock'
-// import { mapGetters } from 'vuex'
 export default {
  data() {
     return {
@@ -40,7 +38,6 @@ export default {
         key:this.val
       }
       searchCompany(__data).then(res=>{
-        res=data.searchList;
         if(res.page.list.length){
           router.push({
             name: 'Project',

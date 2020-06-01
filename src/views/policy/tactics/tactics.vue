@@ -46,8 +46,6 @@
 <script>
 import mixins from '@/mixins'
 import { searchDetail } from '@/api/api'
-import data from '@/mock'
-// import { mapGetters } from 'vuex'
 
 export default {
     mixins: [mixins],
@@ -77,15 +75,11 @@ export default {
                 customerId:this.custId,
             }
             searchDetail(__data).then(res=>{
-                res=data.detailData;
                 this.page=res.page;
                 this.cust=res.cust;
             }).catch(err=>{
                 console.log(err);
             })
-            let res=data.detailData;
-            this.page=res.page;
-            this.cust=res.cust;
         }
     },
 }

@@ -15,18 +15,19 @@
         <!-- 搜索结果列表 -->
         <div class="lists">
             <p class="title_res">{{totalCount}} 搜索结果：</p>
-
-            <section class="single"  v-for="(item,index) in list" :key="index">
-                    <div class="index">{{index+1}}</div>
-                    <div class="info" @click="goList(item.id)">
-                        <p class="g_title_style">{{item.custName}}-{{item.registeredCapitalName}}</p>
-                        <p>{{item.createTime}}</p>
-                    </div>
-            </section>
+            <template v-if="list.length">
+                <section class="single"  v-for="(item,index) in list" :key="index">
+                        <div class="index">{{index+1}}</div>
+                        <div class="info" @click="goList(item.id)">
+                            <p class="g_title_style">{{item.custName}}-{{item.registeredCapitalName}}</p>
+                            <p>{{item.createTime}}</p>
+                        </div>
+                </section>
+            </template>
         </div>
 
         <!-- 分页 -->
-        <div class="pagination">
+        <div class="pagination" v-if="list.length">
             <el-pagination
                 background
                 layout="prev, pager, next,total"
@@ -42,7 +43,6 @@
 <script>
 import { searchCompany } from '@/api/api'
 import mixins from '@/mixins'
-import data from '@/mock'
 import router from '@/router'
 
 export default {
@@ -51,7 +51,7 @@ export default {
         return {
             totalCount: 1, //总条数
             list: [], //数据列表
-            val: '测试', //输入框值
+            val: '', //输入框值
             page: 1, //页数
         }
     },
@@ -75,11 +75,11 @@ export default {
             }
             searchCompany(__data)
                 .then(res => {
-                    res = data.searchList
                     this.totalCount = res.page.totalCount;
                     if (res.page.list.length) {
                         this.list = res.page.list
                     } else {
+                        this.list=[];
                         this.$message('没有搜索内容')
                     }
                 })
