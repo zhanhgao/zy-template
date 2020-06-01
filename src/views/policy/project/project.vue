@@ -19,7 +19,8 @@
                 <section class="single"  v-for="(item,index) in list" :key="index">
                         <div class="index">{{index+1}}</div>
                         <div class="info" @click="goList(item.id)">
-                            <p class="g_title_style">{{item.custName}}-{{item.registeredCapitalName}}</p>
+                            <!-- <p class="g_title_style">{{item.custName}}-{{item.registeredCapitalName}}</p> -->
+                            <p class="g_title_style">{{item.custName}}</p>
                             <p>{{item.createTime}}</p>
                         </div>
                 </section>
