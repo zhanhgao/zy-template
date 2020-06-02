@@ -60,9 +60,11 @@ export default {
     computed: {},
     components: {},
     created() {
-        if (this.$route.params.custId && this.$route.params.id) {
-            this.custId = this.$route.params.custId
-            this.id = this.$route.params.id
+        let _detailId = sessionStorage.getItem("detailId");
+        let _custId = sessionStorage.getItem("custId");
+        if (_detailId && _custId) {
+            this.custId = _custId
+            this.id = _detailId
         }
     },
     mounted(){

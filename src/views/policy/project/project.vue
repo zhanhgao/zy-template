@@ -81,8 +81,9 @@ export default {
     created() {
     },
     mounted() {
-        if (this.$route.params.data) {
-            this.ruleForm.name = this.$route.params.data.key;
+        let _name = sessionStorage.getItem("name");
+        if (_name) {
+            this.ruleForm.name = _name;
             this.search('ruleForm');
         }
     },
@@ -96,6 +97,7 @@ export default {
                         key: this.ruleForm.name,
                         page: this.page,
                     }
+                    sessionStorage.setItem("name", this.ruleForm.name);
                     searchCompany(__data)
                         .then(res => {
                             this.totalCount = res.page.totalCount
@@ -118,9 +120,9 @@ export default {
         // 去证书列表页
         goList(id) {
             router.push({
-                name: 'Certificates',
-                params: { id },
+                name: 'Certificates'
             })
+            sessionStorage.setItem("id", id);
         },
         // 切换页面处理
         handleCurrentChange(value) {

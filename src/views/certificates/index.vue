@@ -44,9 +44,8 @@ export default {
     },
     computed: {},
     created() {
-        if (this.$route.params.id) {
-            this.customerId = this.$route.params.id
-        }
+        let _id = sessionStorage.getItem("id");
+        _id&&(this.customerId = _id);
     },
     mounted(){
         this.getCertificateList();
@@ -73,9 +72,10 @@ export default {
         // 跳转到企业详情
         goDetail(id,custId) {
             router.push({
-                name: 'Tactics',
-                params: { id,custId },
+                name: 'Tactics'
             })
+            sessionStorage.setItem("detailId", id);
+            sessionStorage.setItem("custId", custId);
         },
         // 切换页面处理
         handleCurrentChange(val) {

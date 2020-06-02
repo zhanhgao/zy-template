@@ -40,11 +40,9 @@ export default {
       searchCompany(__data).then(res=>{
         if(res.page.list.length){
           router.push({
-            name: 'Project',
-            params: {
-              data: __data
-            }
+            name: 'Project'
           })
+          sessionStorage.setItem("name", __data.key);
         }else{
           this.$message('没有搜索内容')
         }
