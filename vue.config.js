@@ -19,6 +19,15 @@ module.exports = {
         config.optimization.minimize(false); // 测试生产环境不压缩js代码
       }
     },
+    pwa: {
+      iconPaths: {
+        favicon32: 'favicon.ico',
+        favicon16: 'favicon.ico',
+        appleTouchIcon: 'favicon.ico',
+        maskIcon: 'favicon.ico',
+        msTileImage: 'favicon.ico'
+      }
+    },
   // webpack-dev-server 相关配置
   devServer: {
     host: 'localhost',
