@@ -61,4 +61,5 @@ export default {
     width: 900px;
   }
 }
+@import "@/style/media.scss";
 </style>

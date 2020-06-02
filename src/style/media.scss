@@ -23,3 +23,23 @@
     padding: 20px;
   }
 }
+@media only screen and (max-width: 560px) {
+  .header img{
+      width: 350px;
+  }
+  .className{
+    .title{
+      padding-left: 10px;
+    }
+    .el-input{
+      width: 200px;
+    }
+  }
+  .lists{
+    padding-left: 10px;
+  }
+  .pageMain{
+    width: 100%;
+    max-width: 100%;
+  }
+}
