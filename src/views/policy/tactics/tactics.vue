@@ -1,5 +1,8 @@
 <template>
     <div class="className">
+        <!-- 返回 -->
+        <el-button @click="back">返回</el-button>
+
         <!-- title -->
         <div class="content">
             <!-- 评价结果信息 -->
@@ -72,6 +75,9 @@ export default {
         this.getDetail();
     },
     methods: {
+        back(){
+            this.$router.go(-1);
+        },
         getDetail(){
             let __data={
                 certId:this.id,
@@ -115,6 +121,7 @@ export default {
     background: url(http://www.credit315gov.com/wp-content/uploads/2019/06/2019061908404811.png)
         no-repeat;
     background-size: cover;
+    margin-top: 20px;
 }
 .estimate,
 .company {
