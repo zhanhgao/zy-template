@@ -9,7 +9,7 @@
                 <section class="single"  v-for="(item,index) in list" :key="index">
                         <div class="index">{{index+1}}</div>
                         <div class="info" @click="goDetail(item.id,item.custId)">
-                            <p class="g_title_style">{{custName}}</p>
+                            <p class="g_title_style">{{item.certificateTypeName}}</p>
                             <p>{{item.createTime}}</p>
                         </div>
                 </section>
@@ -36,7 +36,7 @@ import router from '@/router'
 export default {
     data() {
         return {
-            totalCount:10,
+            totalCount:0,
             customerId: '',
             list: [], //数据列表
             custName: '', //公司名称

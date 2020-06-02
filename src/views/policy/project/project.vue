@@ -79,13 +79,12 @@ export default {
     computed: {},
     components: {},
     created() {
+    },
+    mounted() {
         if (this.$route.params.data) {
             this.ruleForm.name = this.$route.params.data.key;
             this.search('ruleForm');
         }
-    },
-    mounted() {
-        
     },
     filters: {},
     methods: {

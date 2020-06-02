@@ -8,7 +8,7 @@
                     <li>信用类型：{{item.certificateTypeName}}</li>
                     <li>评价机构：{{item.evaluateOrganization}}</li>
                     <li>指导机构：{{item.guidanceOrganization}}</li>
-                    <li>信用评级：</li>
+                    <li>信用评级：{{item.certificateGradeName}}</li>
                     <li>证书编号：{{item.certificateNo}}</li>
                     <li>颁发日期：{{item.issUeDate}}</li>
                     <li>有效期至：{{item.periodOfValidity}}</li>
