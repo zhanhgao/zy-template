@@ -12,7 +12,7 @@
       </div>
      
       <div class="ad">
-        <img src="http://www.credit315gov.com/wp-content/uploads/2019/06/2019061902151774.jpg" alt="ad">
+        <img src="http://www.credit315gov.com/wp-content/uploads/2019/06/2019061902151774.jpg" alt="banner">        
       </div>
   </div>
 </template>

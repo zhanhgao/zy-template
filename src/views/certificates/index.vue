@@ -3,7 +3,8 @@
         <section class="single" v-for="(item,index) in list" :key="index">
             <a class="img"></a>
             <div class="info" @click="goDetail(item.id,item.custId)">
-                <p class="g_title_style">{{custName}}-{{item.certificateTypeName}}</p>
+                <!-- <p class="g_title_style">{{custName}}-{{item.certificateTypeName}}</p> -->
+                <p class="g_title_style">{{custName}}</p>
                 <p>{{item.createTime}}</p>
             </div>
             <p class="more">
