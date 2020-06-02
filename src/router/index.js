@@ -26,7 +26,7 @@ export const currencyRoutes = [
         path: 'home',
         name: 'Home',
         component: () => import('@/views/home'),
-        meta: { title: '首页', icon: 'el-icon-s-data' }
+        meta: { title: '全国企业诚信公共服务平台', icon: 'el-icon-s-data' }
       }
     ]
   },
@@ -38,7 +38,7 @@ export const currencyRoutes = [
         path: '/',
         name: 'Certificates',
         component: () => import('@/views/certificates'),
-        meta: { title: '证书列表', icon: 'el-icon-s-data' }
+        meta: { title: '全国企业诚信公共服务平台', icon: 'el-icon-s-data' }
       }
     ]
   },
@@ -47,7 +47,7 @@ export const currencyRoutes = [
     name: 'Policy',
     redirect: '/policy/',
     component: Layout,
-    meta: {title: '管理', icon: 'el-icon-s-marketing' },
+    meta: {title: '全国企业诚信公共服务平台', icon: 'el-icon-s-marketing' },
     children: [
       {
         path: 'project',
@@ -55,7 +55,7 @@ export const currencyRoutes = [
         // component: Project,
         component: () => import('@/views/policy/project/project'),
         meta: {
-          title: '列表',
+          title: '全国企业诚信公共服务平台',
           icon: 'el-icon-s-data',
           permission:{
             status:1,//类型         1:读写  2:只读
@@ -67,11 +67,12 @@ export const currencyRoutes = [
         name: 'Tactics',
         // component: Tactics,
         component: () => import('@/views/policy/tactics/tactics'),
-        meta: { title: '证书详情', icon: 'el-icon-s-data',permission:{status:1}}
+        meta: { title: '全国企业诚信公共服务平台', icon: 'el-icon-s-data',permission:{status:1}}
       }
     ]
   },
   {
+
     path: '*',
     name: '*404',
     redirect: '/error/404',
@@ -81,39 +82,6 @@ export const currencyRoutes = [
 
 /*动态添加routers mock*/ 
 export const asyncRoutes = [
-  // {
-  //   path: '/policy',
-  //   name: 'Policy',
-  //   redirect: '/policy/',
-  //   component: Layout,
-  //   meta: {title: '策略管理', icon: 'el-icon-s-marketing' },
-  //   children: [
-  //     {
-  //       path: 'project',
-  //       name: 'Project',
-  //       component: Project,
-  //       meta: { 
-  //         title: '项目',
-  //         icon: 'el-icon-s-data',
-  //         permission:{
-  //           status:1,//类型         1:读写  2:只读
-  //         }
-  //       },
-  //     },
-  //     {
-  //       path: 'tactics',
-  //       name: 'Tactics',
-  //       component: Tactics,
-  //       meta: { title: '策略', icon: 'el-icon-s-data',permission:{status:1}}
-  //     }
-  //   ]
-  // },
-  // {
-  //   path: '*',
-  //   name: '*404',
-  //   redirect: '/error/404',
-  //   component: Page404,
-  // }
 ]
 
 
@@ -134,5 +102,11 @@ export function resetRouter() {
   const reset = creatRouter()
   router.matcher = reset.matcher
 }
+// 导航守卫
+router.beforeEach(async (to, from, next) => {
+  // title修改
+    window.document.title = to.meta.title == undefined?'全国企业诚信公共服务平台':to.meta.title
+    next();
+});
 
 export default router

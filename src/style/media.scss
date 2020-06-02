@@ -1,5 +1,8 @@
 // 适配css
 @media only screen and (max-width: 767px) {
+  .header img{
+    width: 600px;
+}
   .pageMain {
     width: 85%;
     max-width: 85%;

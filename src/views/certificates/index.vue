@@ -62,6 +62,7 @@ export default {
                 this.list=res.page;
                 this.totalCount=res.page.length;
                 this.custName=res.cust.custName;
+                window.document.title='全国企业诚信公共服务平台-'+res.cust.custName;
               }else{
                 this.$message('没有搜索内容')
               }

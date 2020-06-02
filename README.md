@@ -1,4 +1,4 @@
-# business-manage
+# service-platform
 
 ## Project setup
 ```

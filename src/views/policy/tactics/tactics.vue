@@ -1,5 +1,6 @@
 <template>
     <div class="className">
+        <!-- title -->
         <div class="content">
             <!-- 评价结果信息 -->
             <div class="estimate bortop" v-for="(item,index) in page" :key="index">
@@ -79,6 +80,7 @@ export default {
             searchDetail(__data).then(res=>{
                 this.page=res.page;
                 this.cust=res.cust;
+                window.document.title=res.cust.custName+'-'+res.page[0].certificateTypeName;
             }).catch(err=>{
                 console.log(err);
             })
